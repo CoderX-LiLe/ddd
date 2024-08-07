@@ -34,6 +34,7 @@
         <ddd-spring.version>0.0.1-SNAPSHOT</ddd-spring.version>
         <ddd-command.version>0.0.1-SNAPSHOT</ddd-command.version>
         <ddd-event.version>0.0.1-SNAPSHOT</ddd-event.version>
+        <spring-boot-starter-test.version>2.7.14</spring-boot-starter-test.version>
     </properties>
 
     <dependencyManagement>
@@ -78,6 +79,12 @@
                 <groupId>com.freetime</groupId>
                 <artifactId>ddd-event</artifactId>
                 <version>${ddd-event.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-test</artifactId>
+                <version>${spring-boot-starter-test.version}</version>
             </dependency>
 
         </dependencies>

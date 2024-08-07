@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.freetime</groupId>
+    <artifactId>ddd-example</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>ddd-example</name>
+    <description>ddd-example</description>
+
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>orm-example</module>
+        <module>cache-example</module>
+        <module>lock-example</module>
+        <module>spring-example</module>
+        <module>command-example</module>
+        <module>event-example</module>
+        <module>demo-example</module>
+    </modules>
+
+    <properties>
+        <source.java.version>1.8</source.java.version>
+        <target.java.version>1.8</target.java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
+        <spring-boot.version>2.7.14</spring-boot.version>
+        <ddd-framework.version>0.0.1-SNAPSHOT</ddd-framework.version>
+        <ddd-orm.version>0.0.1-SNAPSHOT</ddd-orm.version>
+        <ddd-cache.version>0.0.1-SNAPSHOT</ddd-cache.version>
+        <ddd-lock.version>0.0.1-SNAPSHOT</ddd-lock.version>
+        <ddd-spring.version>0.0.1-SNAPSHOT</ddd-spring.version>
+        <ddd-command.version>0.0.1-SNAPSHOT</ddd-command.version>
+        <ddd-event.version>0.0.1-SNAPSHOT</ddd-event.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.freetime</groupId>
+                <artifactId>ddd-framework</artifactId>
+                <version>${ddd-framework.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.freetime</groupId>
+                <artifactId>ddd-orm</artifactId>
+                <version>${ddd-orm.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.freetime</groupId>
+                <artifactId>ddd-cache</artifactId>
+                <version>${ddd-cache.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.freetime</groupId>
+                <artifactId>ddd-lock</artifactId>
+                <version>${ddd-lock.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.freetime</groupId>
+                <artifactId>ddd-spring</artifactId>
+                <version>${ddd-spring.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.freetime</groupId>
+                <artifactId>ddd-command</artifactId>
+                <version>${ddd-command.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.freetime</groupId>
+                <artifactId>ddd-event</artifactId>
+                <version>${ddd-event.version}</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven-compiler-plugin.version}</version>
+                <configuration>
+                    <source>${source.java.version}</source>
+                    <target>${target.java.version}</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>${spring-boot.version}</version>
+                <configuration>
+                    <mainClass>com.freetime.ddd.example.DddExampleApplication</mainClass>
+                    <skip>true</skip>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>repackage</id>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

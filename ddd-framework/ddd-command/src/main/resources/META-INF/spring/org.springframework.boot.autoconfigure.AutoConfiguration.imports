@@ -1,0 +1,2 @@
+com.freetime.ddd.command.invoker.CommandInvoker
+com.freetime.ddd.command.config.ConfigCommand

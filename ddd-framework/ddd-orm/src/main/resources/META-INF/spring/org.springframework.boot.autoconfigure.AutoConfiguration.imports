@@ -1,0 +1,3 @@
+com.freetime.ddd.orm.mybaits.handler.DefaultDataFillHandler
+com.freetime.ddd.orm.mybaits.config.MybatisPlusConfig
+com.freetime.ddd.orm.repository.MybatisRepository

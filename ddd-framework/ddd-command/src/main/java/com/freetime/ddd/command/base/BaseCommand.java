@@ -1,6 +1,12 @@
 package com.freetime.ddd.command.base;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.Getter;
+
+@Getter
 public abstract class BaseCommand<T> {
+
+    @JsonIgnore
     private T result;
 
     public abstract void execute();
@@ -9,7 +15,4 @@ public abstract class BaseCommand<T> {
         this.result = result;
     }
 
-    public T getResult() {
-        return result;
-    }
 }

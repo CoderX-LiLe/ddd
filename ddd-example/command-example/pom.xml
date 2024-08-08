@@ -19,8 +19,8 @@
         <dependency>
             <groupId>com.freetime</groupId>
             <artifactId>ddd-command</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
         </dependency>
+
     </dependencies>
 
 

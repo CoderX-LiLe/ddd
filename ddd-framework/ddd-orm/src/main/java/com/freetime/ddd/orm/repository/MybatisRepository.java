@@ -15,6 +15,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
+
 public abstract class MybatisRepository<M extends BaseMapper<T>, T> extends ServiceImpl<M, T> {
 
     protected abstract SFunction<T, ?> getIdAccessor();

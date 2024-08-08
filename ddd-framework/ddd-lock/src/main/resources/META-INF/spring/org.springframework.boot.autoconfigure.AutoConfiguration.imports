@@ -1,5 +1,5 @@
-org.freetime.framework.lock.redis.RedisLock
-org.freetime.framework.lock.database.DatabaseLock
-org.freetime.framework.lock.memory.MemoryLock
-org.freetime.framework.lock.LockConfig
+com.freetime.ddd.lock.redis.RedisLock
+com.freetime.ddd.lock.database.DatabaseLock
+com.freetime.ddd.lock.memory.MemoryLock
+com.freetime.ddd.lock.LockConfig
 com.freetime.ddd.lock.LockInitializer

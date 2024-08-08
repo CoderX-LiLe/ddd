@@ -5,7 +5,8 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class CommandInvoker {
-    public void executeCommand(BaseCommand commandToExecute) {
+
+    public void executeCommand(BaseCommand<?> commandToExecute) {
         commandToExecute.execute();
     }
 }

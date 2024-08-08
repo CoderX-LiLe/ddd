@@ -15,25 +15,21 @@
     <description>demo-example</description>
 
     <dependencies>
-        <dependency>
-            <groupId>com.freetime</groupId>
-            <artifactId>ddd-framework</artifactId>
-        </dependency>
 
         <dependency>
             <groupId>com.freetime</groupId>
             <artifactId>ddd-orm</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>com.freetime</groupId>
-            <artifactId>ddd-cache</artifactId>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.freetime</groupId>-->
+<!--            <artifactId>ddd-cache</artifactId>-->
+<!--        </dependency>-->
 
-        <dependency>
-            <groupId>com.freetime</groupId>
-            <artifactId>ddd-lock</artifactId>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.freetime</groupId>-->
+<!--            <artifactId>ddd-lock</artifactId>-->
+<!--        </dependency>-->
 
         <dependency>
             <groupId>com.freetime</groupId>
@@ -49,6 +45,7 @@
             <groupId>com.freetime</groupId>
             <artifactId>ddd-event</artifactId>
         </dependency>
+
     </dependencies>
 
 

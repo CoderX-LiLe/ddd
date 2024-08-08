@@ -1,11 +1,9 @@
 package com.freetime.demo.example.interfaces.api;
 
-import com.freetime.ddd.core.dto.Result;
 import com.freetime.demo.example.application.command.CreateUserCommand;
 import com.freetime.demo.example.application.service.UserService;
 import com.freetime.demo.example.application.dto.UserDTO;
 import com.freetime.demo.example.interfaces.query.GetUserQuery;
-import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

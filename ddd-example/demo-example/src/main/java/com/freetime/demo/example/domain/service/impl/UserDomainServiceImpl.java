@@ -1,8 +1,6 @@
 package com.freetime.demo.example.domain.service.impl;
 
 import com.baomidou.mybatisplus.core.toolkit.support.SFunction;
-import com.freetime.ddd.command.base.BaseService;
-import com.freetime.ddd.command.invoker.CommandInvoker;
 import com.freetime.ddd.orm.repository.Predicate;
 import com.freetime.demo.example.domain.entity.user.User;
 import com.freetime.demo.example.domain.entity.user.vo.UserInfo;
@@ -14,7 +12,6 @@ import com.freetime.demo.example.domain.repository.dataobject.UserDO;
 import com.freetime.demo.example.domain.repository.dataobject.UserInfoDO;
 import com.freetime.demo.example.domain.service.UserDomainService;
 import org.apache.commons.lang3.tuple.Triple;
-import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

@@ -1,6 +1,5 @@
 package com.freetime.demo.example.domain.entity.user.vo;
 
-import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Builder;
 import lombok.Getter;
 

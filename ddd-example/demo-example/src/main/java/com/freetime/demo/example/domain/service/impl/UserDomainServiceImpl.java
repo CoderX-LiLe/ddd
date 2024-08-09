@@ -30,7 +30,7 @@ public class UserDomainServiceImpl implements UserDomainService {
     @Override
     public User getUser(Long userId) {
         List<Triple<SFunction<UserDO, ?>, Object, Predicate>> userQueryConditions = userRepository.getQueryConditions();
-        userQueryConditions.add(Triple.of(UserDO::getUserId, userId, Predicate.IS_EQUAL));
+        userQueryConditions.add(Triple.of(UserDO::getId, userId, Predicate.IS_EQUAL));
         UserDO userDO = userRepository.findOne(userQueryConditions);
 
         List<Triple<SFunction<UserInfoDO, ?>, Object, Predicate>> userInfoQueryConditions = userInfoRepository.getQueryConditions();
@@ -38,7 +38,10 @@ public class UserDomainServiceImpl implements UserDomainService {
         UserInfoDO userInfoDO = userInfoRepository.findOne(userInfoQueryConditions);
 
         User user = UserConvertor.toEntity(userDO);
-        UserInfo userInfo = UserInfoConvertor.toEntity(userInfoDO);
+        UserInfo userInfo = UserInfo.builder().build();
+        if(userInfoDO != null){
+            userInfo = UserInfoConvertor.toEntity(userInfoDO);
+        }
         user.setUserInfo(userInfo);
         return user;
     }
@@ -46,8 +49,11 @@ public class UserDomainServiceImpl implements UserDomainService {
     @Override
     public void createUser(User user) {
         UserDO userDO = UserConvertor.toDO(user);
-        UserInfoDO userInfoDO = UserInfoConvertor.toDO(user.getUserInfo());
         userRepository.save(userDO);
-        userInfoRepository.save(userInfoDO);
+
+        if(user.getUserInfo() != null){
+            UserInfoDO userInfoDO = UserInfoConvertor.toDO(user.getUserInfo());
+            userInfoRepository.save(userInfoDO);
+        }
     }
 }

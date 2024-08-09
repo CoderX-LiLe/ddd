@@ -7,7 +7,7 @@ public class UserDTOConverter {
 
     public static UserDTO toDTO(User user) {
         return UserDTO.builder()
-                .userId(user.getUserId())
+                .userId(user.getId())
                 .username(user.getUserName())
                 .password(user.getPassword())
                 .email(user.getUserInfo().getEmail())

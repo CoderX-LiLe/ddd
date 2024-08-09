@@ -16,6 +16,12 @@
 
     <dependencies>
 
+
+        <dependency>
+            <groupId>com.freetime</groupId>
+            <artifactId>ddd-command</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>com.freetime</groupId>
             <artifactId>ddd-orm</artifactId>
@@ -34,11 +40,6 @@
         <dependency>
             <groupId>com.freetime</groupId>
             <artifactId>ddd-spring</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>com.freetime</groupId>
-            <artifactId>ddd-command</artifactId>
         </dependency>
 
         <dependency>

@@ -13,11 +13,6 @@ import lombok.EqualsAndHashCode;
 @Builder
 public class UserDO extends BaseDO {
 
-    private Long id;
-
-    @TableField("user_id")
-    private Long userId;
-
     private String userName;
 
     private String password;

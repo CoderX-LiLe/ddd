@@ -7,4 +7,6 @@ public interface UserDomainService {
     User getUser(Long userId);
 
     void createUser(User user);
+
+    void login(Long userId);
 }

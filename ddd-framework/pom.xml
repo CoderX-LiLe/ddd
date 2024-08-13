@@ -40,6 +40,7 @@
         <spring-boot-starter-test.version>2.7.14</spring-boot-starter-test.version>
         <mysql-connector-java.version>8.0.28</mysql-connector-java.version>
         <druid-spring-boot-starter.version>1.2.19</druid-spring-boot-starter.version>
+        <hibernate-validator.version>8.0.1.Final</hibernate-validator.version>
     </properties>
 
     <packaging>pom</packaging>
@@ -151,6 +152,13 @@
                 <groupId>com.alibaba</groupId>
                 <artifactId>druid-spring-boot-starter</artifactId>
                 <version>${druid-spring-boot-starter.version}</version>
+            </dependency>
+
+            <!-- hibernate-validator -->
+            <dependency>
+                <groupId>org.hibernate.validator</groupId>
+                <artifactId>hibernate-validator</artifactId>
+                <version>${hibernate-validator.version}</version>
             </dependency>
 
 

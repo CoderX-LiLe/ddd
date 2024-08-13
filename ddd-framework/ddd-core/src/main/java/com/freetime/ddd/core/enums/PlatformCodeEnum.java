@@ -43,7 +43,13 @@ public enum PlatformCodeEnum {
     /**
      * 当前用户未登录
      */
-    NO_LOGIN("30002", "当前用户未登录");
+    NO_LOGIN("30002", "当前用户未登录"),
+
+    /**
+     * 参数错误
+     */
+    PARAM_ERROR("40000", "参数错误");
+
 
 
     private final String code;

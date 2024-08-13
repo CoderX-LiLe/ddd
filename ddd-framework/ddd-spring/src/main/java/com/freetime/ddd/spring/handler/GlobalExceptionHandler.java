@@ -6,6 +6,7 @@ import com.freetime.ddd.core.enums.PlatformCodeEnum;
 import com.freetime.ddd.core.exception.BaseException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
@@ -39,6 +40,13 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(RuntimeException.class)
     public Result onRuntimeExceptionHandler(RuntimeException exception) {
         return handleErrorInfo(PlatformCodeEnum.SYSTEM_ERROR.getCode(), exception.getMessage(), exception);
+    }
+
+    @ExceptionHandler(MethodArgumentNotValidException.class)
+    public Result MethodArgumentNotValidExceptionHandler(MethodArgumentNotValidException methodArgumentNotValidException) {
+        return handleErrorInfo(PlatformCodeEnum.PARAM_ERROR.getCode(),
+                methodArgumentNotValidException.getBindingResult().getFieldError().getDefaultMessage(),
+                methodArgumentNotValidException);
     }
 
     /**

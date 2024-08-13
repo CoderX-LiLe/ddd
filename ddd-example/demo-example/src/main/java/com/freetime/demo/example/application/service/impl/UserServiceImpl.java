@@ -8,7 +8,7 @@ import com.freetime.demo.example.application.dto.UserDTO;
 import com.freetime.demo.example.application.service.UserService;
 import com.freetime.demo.example.domain.entity.user.User;
 import com.freetime.demo.example.domain.service.UserDomainService;
-import com.freetime.demo.example.interfaces.query.GetUserQuery;
+import com.freetime.demo.example.application.query.GetUserQuery;
 import org.springframework.stereotype.Service;
 
 @Service

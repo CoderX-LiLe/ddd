@@ -3,7 +3,7 @@ package com.freetime.demo.example.interfaces.api;
 import com.freetime.demo.example.application.command.CreateUserCommand;
 import com.freetime.demo.example.application.service.UserService;
 import com.freetime.demo.example.application.dto.UserDTO;
-import com.freetime.demo.example.interfaces.query.GetUserQuery;
+import com.freetime.demo.example.application.query.GetUserQuery;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

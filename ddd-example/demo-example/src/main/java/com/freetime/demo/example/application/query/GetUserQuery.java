@@ -1,4 +1,4 @@
-package com.freetime.demo.example.interfaces.query;
+package com.freetime.demo.example.application.query;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

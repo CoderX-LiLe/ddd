@@ -1,3 +1,4 @@
 com.freetime.ddd.spring.interceptor.GlobalLogsInterceptor
 com.freetime.ddd.spring.utils.BeanUtils
 com.freetime.ddd.spring.config.WebCorsConfiguration
+com.freetime.ddd.spring.handler.GlobalExceptionHandler

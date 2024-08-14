@@ -33,12 +33,17 @@ public class GlobalLogsInterceptor {
         this.objectMapper = objectMapper;
     }
 
-    @Pointcut(value = "@within(org.springframework.web.bind.annotation.RestController) || @within(org.springframework.stereotype.Controller)")
+    @Pointcut(value = " @within(org.springframework.web.bind.annotation.RestController) || @within(org.springframework.stereotype.Controller) ")
     public void pointAspect() {
     }
 
-    @Around("pointAspect()")
-    public Object afterPointAspect(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
+    @Pointcut("execution(* org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.*(..))")
+    public void errorValidPointcut(){
+
+    }
+
+    @Around("pointAspect() && !errorValidPointcut()")
+    public Object afterPointAspect( ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
         long statTime = System.currentTimeMillis();
         String className = proceedingJoinPoint.getSignature().getName();
         log.info("Method Name: {}", className.substring(className.lastIndexOf(".") + 1));

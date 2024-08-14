@@ -154,12 +154,12 @@
                 <version>${druid-spring-boot-starter.version}</version>
             </dependency>
 
-            <!-- hibernate-validator -->
-            <dependency>
-                <groupId>org.hibernate.validator</groupId>
-                <artifactId>hibernate-validator</artifactId>
-                <version>${hibernate-validator.version}</version>
-            </dependency>
+<!--            &lt;!&ndash; hibernate-validator &ndash;&gt;-->
+<!--            <dependency>-->
+<!--                <groupId>org.hibernate.validator</groupId>-->
+<!--                <artifactId>hibernate-validator</artifactId>-->
+<!--                <version>${hibernate-validator.version}</version>-->
+<!--            </dependency>-->
 
 
         </dependencies>

@@ -8,6 +8,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 import javax.servlet.http.HttpServletResponse;
@@ -42,7 +44,13 @@ public class GlobalExceptionHandler {
         return handleErrorInfo(PlatformCodeEnum.SYSTEM_ERROR.getCode(), exception.getMessage(), exception);
     }
 
+    /**
+     * 捕获参数校验异常
+     * @param methodArgumentNotValidException
+     * @return
+     */
     @ExceptionHandler(MethodArgumentNotValidException.class)
+    @ResponseBody
     public Result MethodArgumentNotValidExceptionHandler(MethodArgumentNotValidException methodArgumentNotValidException) {
         return handleErrorInfo(PlatformCodeEnum.PARAM_ERROR.getCode(),
                 methodArgumentNotValidException.getBindingResult().getFieldError().getDefaultMessage(),
